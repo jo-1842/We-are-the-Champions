@@ -11,8 +11,12 @@ html, body {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     padding: 10px;
+}
 
-
+button, 
+textarea,
+input {
+    border: none;
 }
 
 .container {
@@ -38,7 +42,6 @@ h2 {
 #publish-btn,
 .endorsement,
 .input-ctr {
-    border: none;
     width: 100%;
 }
 
@@ -51,7 +54,6 @@ h2 {
    font-size: 15px;
    line-height: 18px;
    border-radius: 8px;
-   border: none;
    resize: none;
    /* white-space: pre;  investigate further */
 }
@@ -111,3 +113,6 @@ h2 {
     width: 25px;
 }
 
+ .warning {
+    border: 2px solid red;
+ }

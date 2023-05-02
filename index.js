@@ -14,13 +14,12 @@ const endorsementsListInDB = ref(database, "endorsements")
 /* html elements  */
 const endorsementsCtrEl = document.getElementById("endorsements-ctr")
 const publishBtn = document.getElementById("publish-btn")
+const textArea = document.getElementById("text-area")
 
 
 
-
-
-publishBtn.addEventListener('click', function(){
-   let inputValue = document.getElementById("text-area").value
+publishBtn.addEventListener('click', function() {
+   let inputValue = textArea.value    
    let fromInput = document.getElementById("from-input").value
    let toInput = document.getElementById("to-input").value
    let liked = false
@@ -29,10 +28,36 @@ publishBtn.addEventListener('click', function(){
    if (inputValue && fromInput && toInput){
     push(endorsementsListInDB, {inputValue, fromInput, toInput, liked, likes})
     clearInput()
-    
+    textArea.classList.remove('warning')
+    document.getElementById("from-input").classList.remove('warning')
+    document.getElementById("to-input").classList.remove("warning")
+
    } else {
-        console.log("please fill in all fields")
+        if (!inputValue) {
+            textArea.classList.add('warning')
+        }
+        if (!fromInput) {
+            document.getElementById("from-input").classList.add('warning')
+        }
+
+        if (!toInput) {
+            document.getElementById("to-input").classList.add("warning")
+        }
+        
+        if (inputValue) {
+            textArea.classList.remove('warning')
+        }
+        
+        if (fromInput) {
+            document.getElementById("from-input").classList.remove('warning')
+        }
+
+        if (toInput) {
+            document.getElementById("to-input").classList.remove("warning")
+        }
    }
+
+
 })
 
 
