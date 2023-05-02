@@ -75,8 +75,8 @@ h2 {
 
 .input-ctr {
     display: flex;
-    margin-top: 13px;
-    gap: 13px;
+    margin-top: 10px;
+    gap: 0 10px;
 }
 
 #from-input,
