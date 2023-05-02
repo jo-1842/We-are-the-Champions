@@ -1,0 +1,113 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #1B1924;
+    color: #fff;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px;
+
+
+}
+
+.container {
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+#freddie {
+    width: 90px;
+    height: 90px;
+    margin: 50px auto 0 auto;  
+}
+
+h1 {
+   font-size: 25px;
+}
+
+h2 {
+   font-size: 20px;
+}
+
+#text-area,
+#publish-btn,
+.endorsement,
+.input-ctr {
+    border: none;
+    width: 100%;
+}
+
+#text-area,
+#from-input,
+#to-input {
+   color: #8F8F8F;
+   background-color: #444059;
+   padding: 1em;
+   font-size: 15px;
+   line-height: 18px;
+   border-radius: 8px;
+   border: none;
+   resize: none;
+   /* white-space: pre;  investigate further */
+}
+
+#publish-btn {
+    background: #28A9F1;
+    color: #04131C;
+    font-size: 22px;
+    font-weight: 700;
+    padding: .8em;
+    margin-top: 13px;
+    border-radius: 8px;
+}
+
+#publish-btn:hover,
+#publish-btn:focus {
+    cursor: pointer;
+}
+
+.input-ctr {
+    display: flex;
+    margin-top: 13px;
+    gap: 13px;
+}
+
+#from-input,
+#to-input {
+    width: 50%;
+    text-align: center;
+}
+
+#endorsements-ctr {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.endorsement {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #1B1924;
+    padding: 1em;
+    margin: 0.5em auto;
+    text-align: left;
+}
+
+#from-and-likes-ctr,
+#likes-ctr {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#likes-ctr {
+    width: 25px;
+}
+
